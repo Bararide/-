@@ -9,7 +9,9 @@ int main(int argc, char** argv)
     array<array<int, n>, n> magic{};
     array<int, n * n> morse{};
 
-    for (int i = 0; i < n * n; ++i)
+    int size = n * n;
+
+    for (int i = 0; i < size; ++i)
     {
         morse[i] = __builtin_popcount(i) % 2 == 0;
     }
